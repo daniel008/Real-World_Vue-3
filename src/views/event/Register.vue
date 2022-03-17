@@ -1,9 +1,18 @@
 <template>
   <p>Register for the event</p>
+  <button @click="register">Register Me</button>
 </template>
 
 <script>
 export default {
-  props: ['event']
+  props: ['event'],
+  methods: {
+    register() {
+      // Call to API
+      // if registered then redirect to event details
+
+      this.$router.push({ name: 'EventDetails' })
+    }
+  }
 }
 </script>
